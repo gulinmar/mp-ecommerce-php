@@ -47,6 +47,7 @@ require __DIR__ .  '/vendor/autoload.php';
 // Add Your credentials
 MercadoPago\SDK::setAccessToken('APP_USR-334491433003961-030821-12d7475807d694b645722c1946d5ce5a-725736327');
 
+
 // Create a preference object
 $preference = new MercadoPago\Preference();
 
