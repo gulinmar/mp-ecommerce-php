@@ -1,5 +1,13 @@
 {
-    "name": "gulinmar/mp-ecommerce-php",
-    "type": "project",
-    "require": {}
+  "repositories": [
+    {
+      "url": "git@github.com:mercadopago/sdk-php.git",
+      "type": "git"
+    }
+  ],       
+  "name": "gulinmar/mp-ecommerce-php",
+  "type": "project",
+  "require": {
+    "mercadopago/dx-php": "dev-master"
+  }	
 }
