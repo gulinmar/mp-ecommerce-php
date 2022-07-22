@@ -436,18 +436,12 @@
     },
     {
         "name": "mercadopago/dx-php",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
+        "version": "2.4.9",
+        "version_normalized": "2.4.9.0",
         "source": {
             "type": "git",
-            "url": "git@github.com:mercadopago/sdk-php.git",
+            "url": "git@github.com/mercadopago/sdk-php.git",
             "reference": "8389608ab859e5f9394910ec1bd74d603d7c17a6"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/mercadopago/sdk-php/zipball/8389608ab859e5f9394910ec1bd74d603d7c17a6",
-            "reference": "8389608ab859e5f9394910ec1bd74d603d7c17a6",
-            "shasum": ""
         },
         "require": {
             "doctrine/annotations": "^1.8",
@@ -477,7 +471,11 @@
                 ]
             }
         },
-        "notification-url": "https://packagist.org/downloads/",
+        "scripts": {
+            "test": [
+                "./vendor/bin/phpunit --testdox --colors=auto tests"
+            ]
+        },
         "license": [
             "MIT"
         ],

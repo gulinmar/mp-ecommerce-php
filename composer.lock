@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "dfcf904ee066bfa9e76d6d4fb7eebeb6",
+    "content-hash": "7c1c6f64dcc354d9cf1063804778f2c2",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -431,17 +431,11 @@
         },
         {
             "name": "mercadopago/dx-php",
-            "version": "dev-master",
+            "version": "2.4.9",
             "source": {
                 "type": "git",
-                "url": "git@github.com:mercadopago/sdk-php.git",
+                "url": "git@github.com/mercadopago/sdk-php.git",
                 "reference": "8389608ab859e5f9394910ec1bd74d603d7c17a6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mercadopago/sdk-php/zipball/8389608ab859e5f9394910ec1bd74d603d7c17a6",
-                "reference": "8389608ab859e5f9394910ec1bd74d603d7c17a6",
-                "shasum": ""
             },
             "require": {
                 "doctrine/annotations": "^1.8",
@@ -469,7 +463,11 @@
                     ]
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "test": [
+                    "./vendor/bin/phpunit --testdox --colors=auto tests"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -527,9 +525,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "mercadopago/dx-php": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
