@@ -149,7 +149,7 @@ $payer->address = array(
   "street_number" => 123,
   "zip_code" => "1828"
 );
-// $preference->payer = array($payer);
+$preference->payer = $payer;
 
 // Create a preference item
 $item = new MercadoPago\Item();
