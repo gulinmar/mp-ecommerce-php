@@ -132,7 +132,9 @@ $preference->payment_methods = array(
 // Set payer data
 $payer = new MercadoPago\Payer();
 $payer->name = "Lalo";
+$payer->first_same = "Lalo";
 $payer->surname = "Landa";
+$payer->last_name = "Landa";
 $payer->email = "test_user_63274575@testuser.com";
 $payer->date_created = "2022-07-22T12:58:41.425-04:00";
 $payer->phone = array(
