@@ -31,6 +31,8 @@
 
   echo "<h4>{$_GET['res']}</h4>";
   echo '<pre>';
-  echo ' ' . print_r($items, true) . ' ';
+  foreach($_GET as $key => $value) {
+    echo $key . " : " . $value . "<br />\r\n";
+  }
   echo '</pre>';
 ?>
