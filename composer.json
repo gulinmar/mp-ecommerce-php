@@ -1,7 +1,7 @@
 {
   "repositories": [
     {
-      "url": "github.com:mercadopago/sdk-php.git",      
+      "url": "git+ssh://github.com:mercadopago/sdk-php.git",      
       "type": "git"
     }
   ], 
