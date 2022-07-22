@@ -151,7 +151,8 @@ $preference->save();
                                             <?php echo "$" . $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <button type="submit" class="mercadopago-button" formmethod="post">Pague a compra</button>
+				    <script data-preference-id='<?php echo $preference->id; ?>' src='https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js'</script>
+                                    <!-- <button type="submit" class="mercadopago-button" formmethod="post">Pague a compra</button> -->
                                 </div>
                             </div>
                         </div>
