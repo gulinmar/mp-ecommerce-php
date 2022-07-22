@@ -1,3 +1,5 @@
+<?php header('x-integrator-id: dev_24c65fb163bf11ea96500242ac130004'); ?>
+
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US">
   <head>
@@ -296,7 +298,7 @@ $preference->save();
     },
     render: {
       container: '.cho-container', // Indicates the name of the class where the payment button will be displayed
-      label: 'Pague a compra', // Changes the button label (optional)
+      label: 'Pagar la compra', // Changes the button label (optional)
     }
   });
 </script>
