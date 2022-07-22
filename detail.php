@@ -187,4 +187,9 @@ $preference->save();
   });
 </script>
 
+<!-- <?php echo $preference->id; ?> -->
+<!-- <?php echo $preference->init_point; ?> -->
+<!-- <?php echo $preference ?> -->
+
+
 </body></html>
