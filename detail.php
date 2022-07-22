@@ -178,7 +178,7 @@ $preference->save();
 
   mp.checkout({
     preference: {
-    id: '<?php $preference->id; ?>'
+    id: '<?php echo $preference->id; ?>'
     },
     render: {
       container: '.cho-container', // Indicates the name of the class where the payment button will be displayed
