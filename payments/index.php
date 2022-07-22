@@ -24,8 +24,10 @@
   }
 
   // Note the append permission requested (a)
-  $file = fopen("output.txt", "a") or die("Cannot open file.");
+  $file = fopen("/tmp/mp_payment.txt", "a") or die("Cannot open file.");
   $data = "{$items}\n";
   fwrite($file, $data);
   fclose($file);  
+
+  echo "<h4>{$_GET['res']}</h4>";
 ?>

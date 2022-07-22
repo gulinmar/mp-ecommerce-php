@@ -5,7 +5,7 @@
   // Converts it into a PHP object
   $data = json_decode($json);
 
-  $file = fopen("data.json", "a") or die("Cannot open file.");
+  $file = fopen("/tmp/mp_webhook_data.json", "a") or die("Cannot open file.");
   fwrite($file, $json);
   fclose($file);  
 
