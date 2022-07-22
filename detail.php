@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=1024">
     <title>Tienda e-commerce</title>
@@ -12,6 +14,7 @@
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
 
+    <script src="https://www.mercadopago.com/v2/security.js" view="detail"></script>
     <script src="https://sdk.mercadopago.com/js/v2"></script>
 
     <link rel="stylesheet" href="./assets/category-landing.css" media="screen, print">
@@ -51,13 +54,121 @@ MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-042414-47e969706991d3a
 // Create a preference object
 $preference = new MercadoPago\Preference();
 
+{
+    "items": [
+        {
+            "id": "item-ID-1234",
+            "title": "Mi producto",
+            "currency_id": "BRL",
+            "picture_url": "https://www.mercadopago.com/org-img/MP3/home/logomp3.gif",
+            "description": "Descripción del Item",
+            "category_id": "art",
+            "quantity": 1,
+            "unit_price": 75.76
+        }
+    ],
+    "payer": {
+        "name": "Juan",
+        "surname": "Lopez",
+        "email": "user@email.com",
+        "phone": {
+            "area_code": "11",
+            "number": "4444-4444"
+        },
+        "identification": {
+            "type": "DNI",
+            "number": "12345678"
+        },
+        "address": {
+            "street_name": "Street",
+            "street_number": 123,
+            "zip_code": "5700"
+        }
+    },
+    "back_urls": {
+        "success": "https://www.success.com",
+        "failure": "http://www.failure.com",
+        "pending": "http://www.pending.com"
+    },
+    "auto_return": "approved",
+    "payment_methods": {
+        "excluded_payment_methods": [
+            {
+                "id": "master"
+            }
+        ],
+        "excluded_payment_types": [
+            {
+                "id": "ticket"
+            }
+        ],
+        "installments": 12
+    },
+    "notification_url": "https://www.your-site.com/ipn",
+    "statement_descriptor": "MYBUSINESS",
+    "external_reference": "Reference_1234",
+    "expires": true,
+    "expiration_date_from": "2016-02-01T12:00:00.000-04:00",
+    "expiration_date_to": "2016-02-28T12:00:00.000-04:00"
+}
+
+// Set payment methods and options
+$preference->payment_methods = array(
+  "excluded_payment_methods" => array(
+    array("id" => "visa")
+  ),
+  "excluded_payment_types" => array(
+    array("id" => "ticket")
+  ),
+  "installments" => 6
+);
+
+// Set payer data
+$payer = new MercadoPago\Payer();
+$payer->name = "Lalo";
+$payer->surname = "Landa";
+$payer->email = "test_user_63274575@testuser.com";
+$payer->date_created = "2022-07-22T12:58:41.425-04:00";
+$payer->phone = array(
+  "area_code" => "11",
+  "number" => "5095-2222"
+);
+
+$payer->identification = array(
+  "type" => "DNI",
+  "number" => "12345678"
+);
+$payer->address = array(
+  "street_name" => "Falsa",
+  "street_number" => 123,
+  "zip_code" => "1828"
+);
+// $preference->payer = array($payer);
+
 // Create a preference item
 $item = new MercadoPago\Item();
+$item->id = 1234;
 $item->title = $_POST['title'];
+$item->description = 'Dispositivo móvil de Tienda e-commerce';
+$item->category_id = "phones";
+$item->currency_id = 'ARS';
 $item->quantity = 1;
 $item->unit_price = $_POST['price'];
+$item->picture_url = $_POST['img'];
 $preference->items = array($item);
+
+// Set back urls
+$preference->back_urls = array(
+  "success" => "https://gulinmar-mp-commerce-php.herokuapp.com/webhook/?res=success",
+  "failure" => "https://gulinmar-mp-commerce-php.herokuapp.com/webhook/?res=failure",
+  "pending" => "https://gulinmar-mp-commerce-php.herokuapp.com/webhook/?res=pending"
+);
+$preference->auto_return = "approved";
+
+// Save the preference
+$preference->external_reference = 'marcelopipa@hotmail.com.br';
 $preference->save();
+
 
 ?>
 
