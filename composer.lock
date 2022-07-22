@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f76f2168215fdf0fca99261e6187a4a",
+    "content-hash": "dfcf904ee066bfa9e76d6d4fb7eebeb6",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -434,7 +434,7 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mercadopago/sdk-php.git",
+                "url": "git@github.com:mercadopago/sdk-php.git",
                 "reference": "8389608ab859e5f9394910ec1bd74d603d7c17a6"
             },
             "dist": {
