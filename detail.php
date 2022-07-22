@@ -161,16 +161,16 @@ $preference->items = array($item);
 
 // Set back urls
 $preference->back_urls = array(
-  "success" => "https://gulinmar-mp-commerce-php.herokuapp.com/webhook/?res=success",
-  "failure" => "https://gulinmar-mp-commerce-php.herokuapp.com/webhook/?res=failure",
-  "pending" => "https://gulinmar-mp-commerce-php.herokuapp.com/webhook/?res=pending"
+  "success" => "https://gulinmar-mp-commerce-php.herokuapp.com/payments/?res=success",
+  "failure" => "https://gulinmar-mp-commerce-php.herokuapp.com/payments/?res=failure",
+  "pending" => "https://gulinmar-mp-commerce-php.herokuapp.com/payments/?res=pending"
 );
 $preference->auto_return = "approved";
 
 // Save the preference
 $preference->external_reference = 'marcelopipa@hotmail.com.br';
+$preference->notification_url = 'https://gulinmar-mp-commerce-php.herokuapp.com/webhook/index.php';
 $preference->save();
-
 
 ?>
 
