@@ -30,4 +30,5 @@
   fclose($file);  
 
   echo "<h4>{$_GET['res']}</h4>";
+  echo "<pre>{print(" ".print_r($items, true)." ")}</pre>";
 ?>
