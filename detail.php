@@ -45,7 +45,7 @@
 // Mercado Pago SDK
 require __DIR__ .  '/vendor/autoload.php';
 // Add Your credentials
-MercadoPago\SDK::setAccessToken('APP_USR-334491433003961-030821-12d7475807d694b645722c1946d5ce5a-725736327');
+MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-042414-47e969706991d3a442922b0702a0da44-469485398');
 
 
 // Create a preference object
@@ -173,8 +173,8 @@ $preference->save();
 
 <script>
   // Add the SDK credentials
-  const mp = new MercadoPago('PUBLIC_KEY', {
-    locale: 'pt-BR'
+  const mp = new MercadoPago('APP_USR-ee70a80f-0848-4b7f-991d-497696acbdcd', {
+    locale: 'es-AR'
   });
 
   mp.checkout({
@@ -190,7 +190,5 @@ $preference->save();
 
 <!-- <?php echo $preference->id; ?> -->
 <!-- <?php echo $preference->init_point; ?> -->
-<!-- <?php echo $preference ?> -->
-
 
 </body></html>
