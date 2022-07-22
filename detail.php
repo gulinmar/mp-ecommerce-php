@@ -54,6 +54,7 @@ MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-042414-47e969706991d3a
 // Create a preference object
 $preference = new MercadoPago\Preference();
 
+/*
 {
     "items": [
         {
@@ -111,6 +112,7 @@ $preference = new MercadoPago\Preference();
     "expiration_date_from": "2016-02-01T12:00:00.000-04:00",
     "expiration_date_to": "2016-02-28T12:00:00.000-04:00"
 }
+*/
 
 // Set payment methods and options
 $preference->payment_methods = array(
